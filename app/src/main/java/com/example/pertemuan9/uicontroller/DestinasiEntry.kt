@@ -1,4 +1,8 @@
-package com.example.pertemuan9.uicontroller
+package com.example.roomdb.uicontroller
 
-object DestinasiEntry {
+import com.example.pertemuan9.R
+
+object DestinasiEntry : DestinasiNavigasi {
+    override val route = "item_entry"
+    override val titleRes = R.string.entry_siswa
 }
