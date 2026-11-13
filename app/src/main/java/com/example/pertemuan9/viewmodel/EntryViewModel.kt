@@ -1,6 +1,6 @@
 package com.example.pertemuan9.viewmodel
 
-import Siswa
+import com.example.pertemuan9.room.Siswa
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue

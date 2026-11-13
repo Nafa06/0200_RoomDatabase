@@ -1,6 +1,6 @@
 package com.example.pertemuan9.view
 
-import Siswa
+import com.example.pertemuan9.room.Siswa
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row

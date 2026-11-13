@@ -1,7 +1,7 @@
 package com.example.pertemuan9.uicontroller
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -16,8 +16,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.pertemuan9.R
-import com.example.pertemuan9.uicontroller.DestinasiEntry
-import com.example.pertemuan9.uicontroller.DestinasiHome
+import com.example.pertemuan9.view.EntrySiswaScreen
+import com.example.pertemuan9.view.HomeScreen
 
 @Composable
 fun SiswaApp(navController: NavHostController = rememberNavController()){
@@ -40,7 +40,7 @@ fun SiswaTopAppBar(
             if (canNavigateBack) {
                 IconButton(onClick = navigateUp) {
                     Icon(
-                        imageVector = Icons.Filled.ArrowBack,
+                        imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = stringResource(R.string.back)
                     )
                 }
