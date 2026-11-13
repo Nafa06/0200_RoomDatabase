@@ -1,9 +1,7 @@
-package com.example.roomdb.repositori
+package com.example.pertemuan9.repositori
 
 import DatabaseSiswa
 import android.content.Context
-import com.example.pertemuan9.repositori.OfflineRepositoriSiswa
-import com.example.pertemuan9.repositori.RepositoriSiswa
 
 interface ContainerApp {
     val repositoriSiswa : RepositoriSiswa
