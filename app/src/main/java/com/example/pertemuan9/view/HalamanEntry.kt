@@ -50,4 +50,9 @@ fun FormInputSiswa(
     modifier: Modifier = Modifier,
     onValueChange: (DetailsSiswa) -> Unit = {},
     enabled: Boolean = true
-) {}
+) {
+    Column(
+        modifier = modifier,
+        verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.padding_medium))
+    ) {}
+}
