@@ -1,7 +1,6 @@
 package com.example.pertemuan9.uicontroller
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -17,8 +16,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.pertemuan9.R
-import com.example.roomdb.uicontroller.DestinasiEntry
-import com.example.roomdb.uicontroller.DestinasiHome
+import com.example.pertemuan9.uicontroller.DestinasiEntry
+import com.example.pertemuan9.uicontroller.DestinasiHome
 
 @Composable
 fun SiswaApp(navController: NavHostController = rememberNavController()){
