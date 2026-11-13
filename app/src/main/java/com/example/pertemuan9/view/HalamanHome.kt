@@ -1,5 +1,6 @@
 package com.example.pertemuan9.view
 
+import Siswa
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
@@ -53,3 +54,9 @@ fun HomeScreen(
         }
     ) {}
 }
+
+@Composable
+fun BodyHome(
+    itemSiswa: List<Siswa>,
+    modifier: Modifier = Modifier
+) {}
