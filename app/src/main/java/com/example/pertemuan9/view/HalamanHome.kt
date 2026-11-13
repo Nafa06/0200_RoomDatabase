@@ -134,7 +134,12 @@ fun DataSiswa(
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth()
-            ) {}
+            ) {
+                Text(
+                    text = siswa.nama,
+                    style = MaterialTheme.typography.titleLarge,
+                )
+            }
         }
     }
 }
