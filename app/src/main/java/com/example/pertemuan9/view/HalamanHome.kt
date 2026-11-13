@@ -146,6 +146,10 @@ fun DataSiswa(
                     imageVector = Icons.Default.Phone,
                     contentDescription = null,
                 )
+                Text(
+                    text = siswa.telpon,
+                    style = MaterialTheme.typography.titleMedium
+                )
             }
         }
     }
