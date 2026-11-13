@@ -1,6 +1,6 @@
 package com.example.pertemuan9.viewmodel
 
-import com.example.pertemuan9.room.Siswa
+import Siswa
 
 data class UIStateSiswa(
     val detailsSiswa: DetailsSiswa = DetailsSiswa(),
@@ -16,6 +16,13 @@ data class DetailsSiswa(
 
 /* Fungsi untuk mengkonversi data input ke data dalam tabel sesuai jenis datanya*/
 fun DetailsSiswa.toSiswa(): Siswa = Siswa(
+    id = id,
+    nama = nama,
+    alamat = alamat,
+    telpon = telpon
+)
+
+fun Siswa.toDetailsSiswa(): DetailsSiswa = DetailsSiswa(
     id = id,
     nama = nama,
     alamat = alamat,
