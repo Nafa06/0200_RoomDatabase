@@ -3,6 +3,7 @@ package com.example.pertemuan9.view
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
@@ -22,3 +23,12 @@ fun EntrySiswaBody(
         modifier = modifier.padding(dimensionResource(id = R.dimen.padding_medium))
     ) {}
 }
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun FormInputSiswa(
+    detailsSiswa: DetailsSiswa,
+    modifier: Modifier = Modifier,
+    onValueChange: (DetailsSiswa) -> Unit = {},
+    enabled: Boolean = true
+) {}
