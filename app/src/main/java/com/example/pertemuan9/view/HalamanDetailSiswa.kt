@@ -2,6 +2,7 @@ package com.example.pertemuan9.view
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -14,7 +15,11 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
@@ -24,6 +29,7 @@ import com.example.pertemuan9.view.route.DestinasiDetailSiswa
 import com.example.pertemuan9.viewmodel.DetailSiswaUiState
 import com.example.pertemuan9.viewmodel.DetailViewModel
 import com.example.pertemuan9.viewmodel.PenyediaViewModel
+import com.example.pertemuan9.viewmodel.toSiswa
 import kotlinx.coroutines.launch
 
 
@@ -85,5 +91,11 @@ private fun BodyDetailDataSiswa(
         modifier = modifier.padding(dimensionResource(id = R.dimen.padding_medium)),
         verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.padding_medium))
     ) {
+        var deleteConfirmationRequired by rememberSaveable { mutableStateOf(false) }
+
+        DetailDataSiswa(
+            siswa = detailSiswaUiState.detailSiswa.toSiswa(),
+            modifier = Modifier.fillMaxWidth()
+        )
     }
 }
