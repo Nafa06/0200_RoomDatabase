@@ -12,7 +12,9 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -31,7 +33,6 @@ import com.example.pertemuan9.viewmodel.DetailViewModel
 import com.example.pertemuan9.viewmodel.PenyediaViewModel
 import com.example.pertemuan9.viewmodel.toSiswa
 import kotlinx.coroutines.launch
-
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -97,5 +98,13 @@ private fun BodyDetailDataSiswa(
             siswa = detailSiswaUiState.detailSiswa.toSiswa(),
             modifier = Modifier.fillMaxWidth()
         )
+
+        OutlinedButton(
+            onClick = { deleteConfirmationRequired = true },
+            shape = MaterialTheme.shapes.small,
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text(stringResource(R.string.delete))
+        }
     }
 }
