@@ -9,6 +9,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.example.pertemuan9.view.DetailSiswaScreen
 import com.example.pertemuan9.view.EntrySiswaScreen
 import com.example.pertemuan9.view.HomeScreen
 import com.example.pertemuan9.uicontroller.DestinasiDetailSiswa
@@ -45,6 +46,10 @@ fun HostNavigasi(
             arguments = listOf(navArgument(itemIdArg) {
                 type = NavType.IntType
             })
-        ){}
+        ){
+            DetailSiswaScreen(
+                //navigateToEditItem = {navController.navigate("${DestinasiEditSiswa.route}/$it")},
+                navigateBack = { navController.navigateUp() })
+        }
     }
 }
