@@ -27,6 +27,7 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.pertemuan9.R
+import com.example.pertemuan9.room.Siswa
 import com.example.pertemuan9.view.route.DestinasiDetailSiswa
 import com.example.pertemuan9.viewmodel.DetailSiswaUiState
 import com.example.pertemuan9.viewmodel.DetailViewModel
@@ -117,4 +118,10 @@ private fun BodyDetailDataSiswa(
             )
         }
     }
+}
+
+@Composable
+fun DetailDataSiswa(
+    siswa: Siswa, modifier: Modifier = Modifier
+) {
 }
