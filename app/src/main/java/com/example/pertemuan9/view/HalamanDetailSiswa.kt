@@ -41,6 +41,7 @@ import com.example.pertemuan9.viewmodel.PenyediaViewModel
 import com.example.pertemuan9.viewmodel.toSiswa
 import kotlinx.coroutines.launch
 
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DetailSiswaScreen(
@@ -185,4 +186,12 @@ private fun BarisDetailData(
         Spacer(modifier = Modifier.weight(1f))
         Text(text = itemDetail, fontWeight = FontWeight.Bold)
     }
+}
+
+@Composable
+private fun DeleteConfirmationDialog(
+    onDeleteConfirm: () -> Unit,
+    onDeleteCancel: () -> Unit,
+    modifier: Modifier = Modifier
+) {
 }
