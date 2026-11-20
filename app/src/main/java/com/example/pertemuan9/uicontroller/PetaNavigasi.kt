@@ -13,11 +13,10 @@ import com.example.pertemuan9.view.DetailSiswaScreen
 import com.example.pertemuan9.view.EditSiswaScreen
 import com.example.pertemuan9.view.EntrySiswaScreen
 import com.example.pertemuan9.view.HomeScreen
-import com.example.pertemuan9.uicontroller.DestinasiDetailSiswa
-import com.example.pertemuan9.uicontroller.DestinasiDetailSiswa.itemIdArg
-import com.example.pertemuan9.uicontroller.DestinasiEditSiswa
 import com.example.pertemuan9.uicontroller.DestinasiEntry
 import com.example.pertemuan9.uicontroller.DestinasiHome
+import com.example.pertemuan9.view.route.DestinasiDetailSiswa
+import com.example.pertemuan9.view.route.DestinasiEditSiswa
 
 @Composable
 fun SiswaApp(navController: NavHostController= rememberNavController(), modifier: Modifier){
@@ -45,7 +44,7 @@ fun HostNavigasi(
         }
         //edit 2 : tambahkan 2 composable route
         composable(route = DestinasiDetailSiswa.routeWithArgs,
-            arguments = listOf(navArgument(itemIdArg) {
+            arguments = listOf(navArgument(DestinasiDetailSiswa.itemIdArg) {
                 type = NavType.IntType
             })
         ){
@@ -53,7 +52,7 @@ fun HostNavigasi(
                 //navigateToEditItem = {navController.navigate("${DestinasiEditSiswa.route}/$it")},
                 navigateBack = { navController.navigateUp() })
         }
-        composable(route=DestinasiEditSiswa.routeWithArgs,
+        composable(route= DestinasiEditSiswa.routeWithArgs,
             arguments = listOf(navArgument(DestinasiEditSiswa.itemIdArg){
                 type= NavType.IntType})){
             EditSiswaScreen(
